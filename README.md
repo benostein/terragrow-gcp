@@ -14,4 +14,4 @@
 gcloud beta artifacts settings enable-upgrade-redirection \
     --project=PROJECT_ID
 ```
-note: change the `PROJECT ID` to your GCP Project ID
+Note: Change the `PROJECT_ID` to your GCP Project ID
