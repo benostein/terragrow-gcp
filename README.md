@@ -8,3 +8,7 @@
 * Cloud Run
 * Cloud Build
 * Cloud Artifact
+
+3. Route The registry to Nearest location. we can run this command using glcoud sdk:
+'''gcloud beta artifacts settings enable-upgrade-redirection \
+    --project=PROJECT_ID'''
