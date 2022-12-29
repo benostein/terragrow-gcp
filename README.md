@@ -4,4 +4,7 @@
 * Read/Write Cloud Run IAM permissions
 * Read/Write Artifact Registry IAM permissions
 
-2. Enable API each GCP used service
+2. Enable API each GCP used service:
+* Cloud Run
+* Cloud Build
+* Cloud Artifact
