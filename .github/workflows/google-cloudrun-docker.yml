@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Google Cloud SDK
-        uses: google-actions/setup-gcloud@master
+        uses: actions/setup-gcloud@v2
         with:
           service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
       - name: Install dependencies
