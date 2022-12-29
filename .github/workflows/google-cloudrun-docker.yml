@@ -1,9 +1,15 @@
 name: Deploy to Cloud Run
 
-on:
-  push:
-    branches:
-      - master
+on: 
+  workflow_dispatch:
+    inputs:
+      loglevel:
+        description: 'loglevel'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Test scnario tags'
+        
 
 jobs:
   deploy:
