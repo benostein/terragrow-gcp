@@ -1,6 +1,6 @@
 # prerequisite
 
-1. Create service account in IAM GCP and download `credentials.json` with contain permisson:
+1. Create service account in IAM GCP and download `credentials.json` with contain following permisson:
 * Read/Write Cloud Run IAM permissions
 * Read/Write Artifact Registry IAM permissions
 
