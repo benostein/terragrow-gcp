@@ -10,4 +10,4 @@
 * Cloud Build
 * Cloud Container Registry / Artifact Registry
 
-3. Create github secret in desired environment name to secure sensitive information
+3. Create Github secret in desired environment name to secure sensitive information
