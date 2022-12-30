@@ -18,14 +18,14 @@ on:
 jobs:
   build-on-cloudrun:
     runs-on: ubuntu-latest
-    environment: cloudrun
+    environment: cloudrun # it depends environment name for secrect which configured in github 
     steps:
       - uses: actions/checkout@v3
       
       - id: 'auth'
         uses: 'google-github-actions/auth@v1'
         with:
-          credentials_json: '${{ secrets.cloudrun.GCLOUD_SERVICE_KEY }}'
+          credentials_json: '${{ secrets.GCLOUD_SERVICE_KEY }}'
       
       - name: 'Set up Google Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
