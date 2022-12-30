@@ -18,6 +18,7 @@ on:
 jobs:
   build-on-cloudrun:
     runs-on: ubuntu-latest
+    environment: cloudrun
     steps:
       - uses: actions/checkout@v3
       
