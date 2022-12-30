@@ -1,3 +1,5 @@
+# GCLOUD_SERVICE_ACCOUNT_NAME; GCLOUD_SERVICE_KEY; and GOOGLE_CLOUD_PROJECT already been set in github secret
+
 name: Deploy to Cloud Run
 
 on:
@@ -21,8 +23,9 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/auth@v1
         with:
-          service_account: ${{ secrets.GCLOUD_SERVICE_KEY }}
-
+          service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_NAME }} # service account name
+          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }} #json formatted service account credentials 
+          
       - name: Install dependencies
         run: |
           apt-get update -y && apt-get install -y python3 python3-pip
