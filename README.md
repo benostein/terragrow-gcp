@@ -5,9 +5,11 @@
 * Read/Write Artifact Registry IAM permissions
 * Read/Write Storage Admin
 
-2. Enable API each GCP used service:
+2. Enable API each GCP service that needed:
 * Cloud Run
 * Cloud Build
 * Cloud Container Registry / Artifact Registry
+
+3. Docker Oauth2 access token
 
 3. Create Github secret with desired environment name to secure sensitive information
