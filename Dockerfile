@@ -1,10 +1,17 @@
 FROM python:3.8-slim
 
-WORKDIR /app
+RUN pip install --upgrade pip
 
-COPY . .
+RUN adduser -D myuser
 
-RUN python -m pip install --upgrade pip \
-  && pip install -r requirements.txt
+USER myapp
+
+WORKDIR /home/myapp
+
+COPY --chown=myuser:myuser . .
+
+COPY --chown=myuser:myuser requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
 
 CMD ["python", "-m", "flask", "run", "--host=0.0.0.0"]
