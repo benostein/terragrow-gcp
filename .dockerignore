@@ -1,5 +1,4 @@
 # do not include these folders
-.dockerignore/
 .github/
 
 # do not include git files
@@ -8,3 +7,4 @@ LICENSE
 
 # do not include Dockerfile
 Dockerfile
+.dockerignore
