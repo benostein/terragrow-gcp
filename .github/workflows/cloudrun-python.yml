@@ -24,7 +24,7 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           service_account: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_NAME }} # service account name
-          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }} #json formatted service account credentials 
+#           credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }} #json formatted service account credentials 
           
       - name: Install dependencies
         run: |
