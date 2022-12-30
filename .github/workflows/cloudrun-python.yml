@@ -31,14 +31,11 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v1'
         with:
           project_id: '${{ secrets.GOOGLE_CLOUD_PROJECT }}'
-        env:
-          DEBUG: 'auth:'
           
       - name: Install dependencies
         run: |
           apt-get update -y && apt-get install -y python3 python3-pip
           pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-
 
       - name: Build and push Docker image
         run: |
