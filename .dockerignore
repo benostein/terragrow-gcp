@@ -1,0 +1,10 @@
+# do not include these folders
+.dockerignore/
+.github/
+
+# do not include git files
+*.md
+LICENSE
+
+# do not include Dockerfile
+Dockerfile
