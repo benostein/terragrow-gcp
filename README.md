@@ -8,11 +8,6 @@
 2. Enable API each GCP used service:
 * Cloud Run
 * Cloud Build
-* Cloud Artifact
+* Cloud Container Registry / Artifact Registry
 
-3. Route The registry to Nearest location. We can run this command using glcoud sdk:
-```console
-gcloud beta artifacts settings enable-upgrade-redirection \
-    --project=PROJECT_ID
-```
-Note: Change the `PROJECT_ID` to your GCP Project ID
+3. Create github secret in desired environment name to secure sensitive information
