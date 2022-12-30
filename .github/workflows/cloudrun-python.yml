@@ -21,7 +21,7 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/auth@v1
         with:
-          cloudrun: ${{ secrets.GCLOUD_SERVICE_KEY }}
+          service_account: ${{ secrets.GCLOUD_SERVICE_KEY }}
 
       - name: Install dependencies
         run: |
