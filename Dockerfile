@@ -12,4 +12,4 @@ COPY --chown=myuser:myuser ./* .
 
 RUN pip install -r requirements.txt
 
-CMD [python -m flask run --port=8000 --module=myapp]
+CMD ["python", "-m", "flask run", "--port=8000", "--module=myapp"]
