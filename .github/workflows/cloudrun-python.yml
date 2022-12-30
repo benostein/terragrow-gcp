@@ -39,6 +39,10 @@ jobs:
         uses: 'google-github-actions/setup-gcloud@v1'
         with:
           project_id: '${{ secrets.GOOGLE_CLOUD_PROJECT }}'
+          
+      # This runs "docker login" directly to Container Registry and catch the access token
+      - run: |-
+          echo '${{ steps.auth.outputs.access_token }}' | docker login -u oauth2accesstoken --password-stdin https://gcr.io
        
       # This section is for handle python dependencies and build container image to Google Container Registry
       - name: Install dependencies
