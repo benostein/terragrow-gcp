@@ -2,7 +2,7 @@ FROM python:3.8-slim
 
 RUN pip install --upgrade pip
 
-RUN adduser -D myuser
+RUN useradd -m myuser
 
 USER myapp
 
