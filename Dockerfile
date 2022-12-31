@@ -1,15 +1,20 @@
 FROM python:3.8-slim
 
-RUN pip install --upgrade pip
+# Set working directory
+WORKDIR /app
 
-RUN useradd -m myuser
-
-USER myuser
-
-WORKDIR /home/myapp
-
-COPY --chown=myuser:myuser . /home/myapp
-
+# Install dependencies
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
-CMD ["python", "-m", "flask run", "--port=8080", "--module=app"]
+# Copy application code
+COPY . .
+
+# Expose port 8080
+EXPOSE 8080
+
+# Run the application
+CMD ["python", "-m", "flask", "run", "--port=8080"]
+
+
+
