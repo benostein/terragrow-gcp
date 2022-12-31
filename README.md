@@ -10,6 +10,6 @@
 * Cloud Build
 * Cloud Container Registry / Artifact Registry
 
-3. Docker Oauth2 access token refer to this link https://github.com/google-github-actions/auth
+3. Docker Oauth2 access token. Please refer to this link https://github.com/google-github-actions/auth
 
 3. Create Github secret with desired environment name to secure sensitive information
