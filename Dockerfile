@@ -4,7 +4,7 @@ RUN pip install --upgrade pip
 
 RUN useradd -m myuser
 
-USER myapp
+USER myuser
 
 WORKDIR /home/myapp
 
