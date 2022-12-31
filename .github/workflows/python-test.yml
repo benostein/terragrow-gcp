@@ -1,6 +1,6 @@
 # GCLOUD_SERVICE_ACCOUNT_NAME; GCLOUD_SERVICE_KEY; and GOOGLE_CLOUD_PROJECT already been set in github secret
 
-name: Deploy to Cloud Run
+name: Deploy to Cloud Run test 
 
 on:
 #  push:
