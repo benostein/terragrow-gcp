@@ -3,12 +3,12 @@ FROM python:3.8-slim
 # Set working directory
 WORKDIR /app
 
+# Copy application code
+COPY . ./
+
 # Install dependencies
 RUN pip install -r requirements.txt \
     && pip install Flask gunicorn
-
-# Copy application code
-COPY . ./
 
 # # Expose port 8080
 # EXPOSE 8080
