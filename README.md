@@ -1,5 +1,5 @@
 # Prerequisite
- Please refer to this link https://github.com/google-github-actions/auth to complete the prerequisites
+ Please refer to this link https://github.com/google-github-actions/auth to complete the prerequisites and make sure we don't miss any single step.
 
 
 1. Create service account in IAM GCP and download `credentials.json` with contain following permisson:
@@ -12,6 +12,6 @@
 * Cloud Build
 * Cloud Container Registry / Artifact Registry
 
-3. Docker Oauth2 access token
+3. OIDC Provider at Identitiy Federation at GCP must be active
 
-3. Create Github secret with desired environment name to secure sensitive information
+3. Create Github secret with desired environment name to secure sensitive information.
