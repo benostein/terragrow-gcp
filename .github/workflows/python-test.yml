@@ -29,8 +29,8 @@ jobs:
         uses: 'google-github-actions/auth@v1'
         with:
           token_format: 'access_token' # <--
-          workload_identity_provider: '${{ secret.IDENTITY_PROVIDER_WORKLOAD }}'
-          service_account: '${{ secret.SERVICE_ACCOUNT_NAME }}'
+          workload_identity_provider: '${{ secrets.IDENTITY_PROVIDER_WORKLOAD }}'
+          service_account: '${{ secrets.SERVICE_ACCOUNT_NAME }}'
           access_token_lifetime: '3000s' # optional, default: '3600s' (1 hour)
           
         # this is optional, we can use secret_key.json from service account configureation
