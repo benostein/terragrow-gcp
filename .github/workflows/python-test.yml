@@ -39,6 +39,7 @@ jobs:
           token_format: 'access_token' # <--
           workload_identity_provider: '${{ secrets.IDENTITY_PROVIDER_WORKLOAD }}'
           service_account: '${{ secrets.SERVICE_ACCOUNT_NAME }}'
+          id_token_include_email: true
           access_token_lifetime: '3000s' # optional, default: '3600s' (1 hour)
           
         # this is optional, we can use secret_key.json from service account configureation
@@ -66,7 +67,7 @@ jobs:
       # This section is for handle python dependencies and build container image to Google Container Registry
       - name: Install dependencies
         run: |
-          apt-get update -y && apt-get install -y python3 python3-pip
+          apt-get apt-get install -y python3 python3-pip
           pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
       - name: Build and push Docker image
