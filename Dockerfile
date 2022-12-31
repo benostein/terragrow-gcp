@@ -1,10 +1,12 @@
 FROM python:3.8-slim
 
+# Copy application code
+COPY requirements.txt requirements.txt
+
+COPY . ./app
+
 # Set working directory
 WORKDIR /app
-
-# Copy application code
-COPY . ./
 
 # Install dependencies
 RUN pip install -r requirements.txt \
