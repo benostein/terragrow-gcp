@@ -8,7 +8,7 @@ USER myapp
 
 WORKDIR /home/myapp
 
-COPY --chown=myuser:myuser ./* .
+COPY --chown=myuser:myuser . /home/myapp
 
 RUN pip install -r requirements.txt
 
