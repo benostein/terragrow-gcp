@@ -15,6 +15,10 @@ on:
       tags:
         description: 'Test scnario tags'
 
+permissions:
+  contents: 'read'
+  id-token: 'write'
+
 jobs:
   build-on-cloudrun:
     runs-on: ubuntu-latest
