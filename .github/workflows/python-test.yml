@@ -65,9 +65,9 @@ jobs:
           project_id: '${{ secrets.GOOGLE_CLOUD_PROJECT }}'
        
       # This section is for handle python dependencies and build container image to Google Container Registry
-      - name: Install dependencies
-        run: |-
-          pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
+#       - name: Install dependencies
+#         run: |-
+#           pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
 
       - name: Build and push Docker image
         run: |
