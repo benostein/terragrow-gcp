@@ -17,7 +17,7 @@ on:
 
 env:
   CLOUD_RUN_SERVICE_NAME: 'hello-cloud-run'
-  CLOUD_RUN_REGION: 'asia-southeast2' #please refer to this for valid GCP regions link https://cloud.google.com/compute/docs/regions-zones
+  CLOUD_RUN_REGION: 'asia-southeast2' #please refer to https://cloud.google.com/compute/docs/regions-zones valid GCP regions
 
 permissions:
   contents: 'read'
