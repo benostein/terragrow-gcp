@@ -58,17 +58,13 @@ jobs:
       - run: |-
           echo '${{ steps.auth.outputs.access_token }}' | docker login -u oauth2accesstoken --password-stdin https://asia.gcr.io
       
-      # This section is responsible to select Google cloud Project ID
+      # SetUP GCloud Components
       - name: 'Set up Google Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v1'
         with:
           project_id: '${{ secrets.GOOGLE_CLOUD_PROJECT }}'
-       
-      # This section is for handle python dependencies and build container image to Google Container Registry
-#       - name: Install dependencies
-#         run: |-
-#           pip3 install --upgrade google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client
-
+     
+     # Build and push docker to Google Container Registry
       - name: Build and push Docker image
         run: |
           docker build -t asia.gcr.io/${{ secrets.GOOGLE_CLOUD_PROJECT }}/cloudrun/hello-world:${{ github.sha }} .
