@@ -15,6 +15,10 @@ on:
       tags:
         description: 'Test scnario tags'
 
+env:
+  CLOUD_RUN_SERVICE_NAME: 'hello-cloud-run'
+  CLOUD_RUN_REGION: 'asia-southeast2' #please refer to this for valid GCP regions link https://cloud.google.com/compute/docs/regions-zones
+
 permissions:
   contents: 'read'
   id-token: 'write'
@@ -74,5 +78,6 @@ jobs:
       - uses: 'google-github-actions/deploy-cloudrun@v1'
         with:
           image: 'asia.gcr.io/${{ secrets.GOOGLE_CLOUD_PROJECT }}/cloudrun/hello-world:${{ github.sha }}'
-          service: 'hello-cloud-run'
+          service: '${{ env.CLOUD_RUN_SERVICE_NAME }}'
+          region: '${{ env.CLOUD_RUN_REGION }}'
         
