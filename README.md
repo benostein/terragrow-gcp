@@ -9,9 +9,8 @@
 
 2. Enable API each GCP service that needed:
 * Cloud Run
-* Cloud Build
 * Cloud Container Registry / Artifact Registry
 
-3. OIDC Provider at Identitiy Federation at GCP must be active
+3. OIDC Provider Identitiy Federation at GCP must be active
 
-3. Create Github secret with desired environment name to secure sensitive information.
+4. Create Github secret with desired environment name to secure sensitive information.
