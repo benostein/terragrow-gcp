@@ -1,5 +1,5 @@
 # Prerequisite
- Please refer to this link https://github.com/google-github-actions/auth to complete the prerequisites and make sure we don't miss any single step.
+ Please refer to this link https://github.com/google-github-actions/auth to complete the prerequisites. Make sure we don't miss any single step.
 
 
 1. Create service account in IAM GCP and download `credentials.json` with contain following permisson:
