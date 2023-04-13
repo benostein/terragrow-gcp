@@ -5,7 +5,7 @@ import json
 
 app = Flask(__name__)
 
-json_key = json.dumps({
+dict_key = {
         "type": "service_account",
         "project_id": "terragrow-1",
         "private_key_id": os.environ.get('PRIVATE_KEY_ID'),
@@ -16,10 +16,10 @@ json_key = json.dumps({
         "token_uri": "https://oauth2.googleapis.com/token",
         "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
         "client_x509_cert_url": os.environ.get('CLIENT_X509_CERT_URL')
-    })
+    }
 
 # Initialize Firestore DB
-cred = credentials.Certificate(json_key)
+cred = credentials.Certificate(dict_key)
 default_app = initialize_app(cred)
 db = firestore.client()
 plant_ref = db.collection('plants')
