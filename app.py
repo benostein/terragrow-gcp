@@ -29,8 +29,7 @@ def create():
         e.g. json={'id': '1', 'title': 'Write a blog post'}
     """
     try:
-        id = len(plant_ref.get()) + 1
-        plant_ref.document(id).set(request.json)
+        plant_ref.document.add(request.json)
         return jsonify({"success": True}), 200
     except Exception as e:
         return f"An Error Occurred: {e}"
