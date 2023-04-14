@@ -2,7 +2,7 @@ import os
 from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
 from google.cloud import secretmanager
-
+import json
 
 app = Flask(__name__)
 
@@ -11,9 +11,10 @@ client = secretmanager.SecretManagerServiceClient()
 name = "projects/405630183099/secrets/terragrow-key/versions/latest"
 response = client.access_secret_version(name=name)
 key_data = response.payload.data.decode('UTF-8')
-
+# Assuming `secret` contains the JSON formatted string
+secret_dict = json.loads(key_data)
 # Initialize Firestore DB
-cred = credentials.Certificate(key_data)
+cred = credentials.Certificate(secret_dict)
 default_app = initialize_app(cred)
 db = firestore.client()
 plant_ref = db.collection('plants')
