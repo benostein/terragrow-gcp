@@ -3,8 +3,10 @@ from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
 from google.cloud import secretmanager
 import json
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 # Retrieve the secret from the Secret Manager
 client = secretmanager.SecretManagerServiceClient()
