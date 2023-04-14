@@ -46,12 +46,17 @@ def read():
         plant_id = request.args.get('id')
         if plant_id:
             plant = plant_ref.document(plant_id).get()
-            return jsonify(plant.to_dict()), 200
+            plant_dict = plant.to_dict()
+            plant_dict['id'] = plant.id
+            return jsonify(plant_dict), 200
         else:
             all_plants = [doc.to_dict() for doc in plant_ref.stream()]
+            for plant in all_plants:
+                plant['id'] = plant_ref.document(plant['id']).id
             return jsonify(all_plants), 200
     except Exception as e:
         return f"An Error Occurred: {e}"
+
 
 @app.route('/update', methods=['POST', 'PUT'])
 def update():
