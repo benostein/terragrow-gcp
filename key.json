@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "terragrow-1",
+  "private_key_id": "68ee45ad0761eb48e8de86b8b7f26f0653e57884",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDIpKwTzSDvDYE8\nDR1TYmtc/VSDviYp3HBA5GGywvCma/+xdEFfuBoOpw6MeEV/VO1oOkwBDN+bbpl1\nVqq/S8pTVSF1qm24d6rt5hw15WDH0MuETaFQzwIyOS6CmQ6cCsgn5DL9XbHlCEc/\nuxhUmtJRMC96ALFCy07fJ30raD5f7bwOWK6TZ/XchO7EW4SE28jsLgjv6pIg+UGq\ns2E0PeU6ySMltUvqzfC363+924q3rwfRPC7PgQamALRVkdPOBZGTbPe3noN3FH9C\nvwsPComeIi4/rUOXh2Ovqz097vaCWkmtDzvluNhdcACmzO0262V+9j3R4nQMRy3B\n8018ybSHAgMBAAECggEAGT8zUeiJYNszrFFAI+pp9REBbfRiy/irfVbffkVuT5qe\nWX917Gv3h2l4+K73m76dgvR29NjgWCgSEkQ+BwUr59F5/NrdpI0WSooeeZ+rzmjU\n+whjqI3rylMMqa1Fu9fVeMOLsPr1tAqXIItT0+2JUmL8Tl9A7tUzTvwikXA0DRDd\nfFpXQx83ckxHEI8pXNPhRkrUKfDOi1FDiha2je/6cIQRPkEw8pEdcE2Xg4EauT/2\nKwsNLMf3F2E6jxVGS8wIZedSJPWZ4HV2UdszgnVwAMutdZxZPZ4xBlHWGfgOY+PQ\nB98UzQSKT79u7ExnxzPXgEAhGhGbsse0KewjRftv6QKBgQDqKnc2Ndrtr2/X/p2n\ny5q3wlD4RtnfeIHRtXndismd8QTTTOlzG7X8KVyZNHqfu1bHXPMo2IvVl/Ho+6HH\natluK3EDN+zOV50ih1H3kniyz8K4QdO8VFOcNI4QETlWVstTz2LJ0yKrx6dvcuy+\n2g3Eej6XYxE8EJQUAacotzu5eQKBgQDbWgWl1GrCAHtB3adTuqi7yeOxuJp4IyQL\nIh8Hn4D2qx50QDg6mnkTGy8nErIa4+xc297ZDMriIbbBx75d96id1/d7uyKCUYNp\n+lHLBrMCneSVOlgI/oVLgipHfXLbA8UaSirFi6FLA6d8LdPavmqHa5NtToaJCoqb\nKuA3BYNd/wKBgQCVl5lepVr92sSdfMgkqJpnaBin80M+UtLEMKXwlLgmURGfFxRP\n99TziUzhhrgLkPdoFwY0AtqaEh51k0MPjT/n9JKW1sROMYRtyXrgqM64lKc1ZMAq\nIMjlEmHq+8XgVURBf0wB2QLeMIbTWNzLM6v1545S0fPxpjmi6kdqaFwcKQKBgQDC\n8E8ioBO8k/b2g0lIlRONyI9tizTkXb6TkmBnQu62yT7Ia6ZNFqlRPJB8NhZI5ZRS\ntihnVwIbU4D62EwrcITOunc75AR4Mn8KuSbluu9t/Op/YJmKbMADaguu+yMO11vc\n0FsQstXGN9op9wRXW3CLJySfOPFBazfhTIp0+5ZS+wKBgQCa64O+62rx+ARx+BJq\nvS+Er5qc4SQBu2tF59gEdj59ji8bvn9vxcw5fXpbrYNLhVGX9iLeaxM1jB9DLxoQ\n9MOhwUIxCp34r09SzsN8C/QRDh8Vj4nW7+bv6JjV0AlNSfVe/ozYrJdrTo4yRPWK\nDRtF6clNbO2xONpksowIMQuQwQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-85qyz@terragrow-1.iam.gserviceaccount.com",
+  "client_id": "105927887870014125875",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-85qyz%40terragrow-1.iam.gserviceaccount.com"
+}
