@@ -42,7 +42,6 @@ def read():
         all_plants : Return all documents.
     """
     try:
-        # Check if ID was passed to URL query
         plant_id = request.args.get('id')
         if plant_id:
             plant = plant_ref.document(plant_id).get()
@@ -50,9 +49,11 @@ def read():
             plant_dict['id'] = plant.id
             return jsonify(plant_dict), 200
         else:
-            all_plants = [doc.to_dict() for doc in plant_ref.stream()]
-            for plant in all_plants:
-                plant['id'] = plant_ref.document(plant['id']).id
+            all_plants = []
+            for doc in plant_ref.stream():
+                plant = doc.to_dict()
+                plant['id'] = doc.id
+                all_plants.append(plant)
             return jsonify(all_plants), 200
     except Exception as e:
         return f"An Error Occurred: {e}"
