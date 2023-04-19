@@ -31,7 +31,7 @@ def create():
     """
     try:
         json_request = request.json
-        json_request['timestamp_created'] = datetime.datetime.now()
+        json_request['timestamp_created'] = firestore.SERVER_TIMESTAMP
         plant_ref.add(json_request)
         return jsonify({"success": True}), 200
     except Exception as e:
@@ -56,6 +56,7 @@ def read():
             for doc in plant_ref.stream():
                 plant = doc.to_dict()
                 plant['id'] = doc.id
+                plant['timestamp_created'] = plant['timestamp_created'].strftime("%Y-%m-%d %H:%M:%S")
                 all_plants.append(plant)
             return jsonify(all_plants), 200
     except Exception as e:
