@@ -92,7 +92,7 @@ def delete():
 
 # Delete multiple documents
 
-@app.route('/deleteList', methods=['GET', 'DELETE'])
+@app.route('/deleteList', methods=['POST'])
 def deleteList():
     # Delete multiple documents
     try:
