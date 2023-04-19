@@ -1,3 +1,4 @@
+import datetime
 import os
 from flask import Flask, request, jsonify
 from firebase_admin import credentials, firestore, initialize_app
@@ -29,7 +30,9 @@ def create():
         e.g. json={'id': '1', 'title': 'Write a blog post'}
     """
     try:
-        plant_ref.add(request.json)
+        json_request = request.json
+        json_request['timestamp_created'] = datetime.datetime.now()
+        plant_ref.add(json_request)
         return jsonify({"success": True}), 200
     except Exception as e:
         return f"An Error Occurred: {e}"
