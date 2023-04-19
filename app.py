@@ -90,6 +90,23 @@ def delete():
     except Exception as e:
         return f"An Error Occurred: {e}"
 
+# Delete multiple documents
+
+@app.route('/deleteList', methods=['GET', 'DELETE'])
+def deleteList():
+    # Delete multiple documents
+    try:
+        # Check for ID in URL query
+        json_request = request.json
+        for plant_id in json_request:
+            plant_ref.document(plant_id).delete()
+        return jsonify({"success": True}), 200
+    except Exception as e:
+        return f"An Error Occurred: {e}"
+
+
+
+
 
 if __name__ == 'main':
     app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 8080)))
