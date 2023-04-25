@@ -37,7 +37,7 @@ def create():
     except Exception as e:
         return f"An Error Occurred: {e}"
 
-@app.route('/list', methods=['GET'])
+@app.route('/plants', methods=['GET'])
 def read():
     """
         read() : Fetches documents from Firestore collection as JSON.
